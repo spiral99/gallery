@@ -20,7 +20,6 @@ pipeline {
             steps {
                 // Build and test your application (replace with your own commands)
                 sh 'npm run'
-                
             }
         }
 
