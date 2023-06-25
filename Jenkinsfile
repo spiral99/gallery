@@ -31,9 +31,4 @@ pipeline {
             }
         }
     }
-
-    // Automatically trigger the pipeline every 5 minutes
-    triggers {
-        cron('*/5 * * * *')
-    }
 }
