@@ -13,7 +13,6 @@ pipeline {
             steps {
                 // Ensure required software is available
                 sh 'npm install'
-                sh 'npm install forever'
             }
         }
 
@@ -28,7 +27,7 @@ pipeline {
         stage('Deploy to Render') {
             steps {
                 // Start the server using node
-                sh 'JENKINS_NODE_COOKIE=dontKillMe node server &'
+                sh 'node server'
             }
         }
     }
