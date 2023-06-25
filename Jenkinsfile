@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Ensure required software is available
                 sh 'npm install'
-                sh 'npm install forever -g'
+                sh 'sudo npm install forever -g'
             }
         }
 
