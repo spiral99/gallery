@@ -19,7 +19,7 @@ pipeline {
         stage('Build and test') {
             steps {
                 // Build and test your application (replace with your own commands)
-                sh 'npm run build'
+                sh 'npm run'
                 sh 'npm test'
             }
         }
