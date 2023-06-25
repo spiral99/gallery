@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy to Render') {
             steps {
                 // Start the server using node
-                sh 'node server &'
+                sh 'node server'
             }
         }
     }
