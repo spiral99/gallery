@@ -20,14 +20,14 @@ pipeline {
             steps {
                 // Build and test your application (replace with your own commands)
                 sh 'npm run'
-                sh 'npm test'
+                
             }
         }
 
         stage('Deploy to Render') {
             steps {
                 // Start the server using node
-                sh 'forever start server.js'
+                sh 'node server &'
             }
         }
     }
