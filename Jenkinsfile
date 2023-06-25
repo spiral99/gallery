@@ -13,6 +13,7 @@ pipeline {
             steps {
                 // Ensure required software is available
                 sh 'npm install'
+                sh 'npm install forever -g'
             }
         }
 
@@ -27,7 +28,7 @@ pipeline {
         stage('Deploy to Render') {
             steps {
                 // Start the server using node
-                sh 'node server'
+                sh 'forever start server.js'
             }
         }
     }
