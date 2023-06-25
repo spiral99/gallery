@@ -32,8 +32,8 @@ pipeline {
         }
     }
 
-    // Automatically trigger the pipeline on every push to the repository
+    // Automatically trigger the pipeline every 5 minutes
     triggers {
-        scm('*/5 * * * *') // Check for changes every 5 minutes
+        cron('*/5 * * * *')
     }
 }
