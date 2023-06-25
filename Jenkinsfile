@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy to Render') {
             steps {
                 // Start the server using node
-                sh 'forever start server.js'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe forever start server.js'
             }
         }
     }
